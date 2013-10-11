@@ -51,9 +51,15 @@
     };
 
     ClassDef.prototype.config = function(angular, httpBackend) {
+      configAllow(httpBackend);
       configResources(angular, httpBackend);
     };
 
+
+    var configAllow = function(httpBackend) {      
+      // Allow get html to load templates
+      httpBackend.when('GET', regexpUrl(/.html$/)).passThrough();
+    };
 
     //--- mocked resources
 
