@@ -147,7 +147,7 @@
 
   ngMockBackend.factory('regexpUrl', function() { return regexpUrl; });
 
-  // TODO: deprecated in futures versions
+  // TODO: deprecate in futures versions
   ngMockBackend.factory('angular', function() { return angular; });
   ngMockBackend.factory('httpBackend', ['$httpBackend', function($httpBackend) { return $httpBackend; }]);
 
