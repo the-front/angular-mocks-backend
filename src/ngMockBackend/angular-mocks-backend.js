@@ -1,5 +1,5 @@
 /*
-  AngularJS Mocks Backend v0.1.3
+  AngularJS Mocks Backend v0.1.4
   (c) 2013 Erko Bridee - https://github.com/erkobridee/angular-mocks-backend/releases/tag/v0.1.3
   License: MIT
 */
@@ -191,8 +191,11 @@
 
   function($provide) {
 
-    // Decorate by passing in the constructor for mock $httpBackend
-    $provide.decorator('$httpBackend', createHttpBackendMock);
+  var obj = new angular.mock.$HttpBackendProvider(),
+      createHttpBackendMock = obj.$get[1];
+
+  // Decorate by passing in the constructor for mock $httpBackend
+  $provide.decorator('$httpBackend', createHttpBackendMock);
 
   }]);
 
