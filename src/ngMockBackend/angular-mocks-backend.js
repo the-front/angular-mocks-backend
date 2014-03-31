@@ -191,11 +191,11 @@
 
   function($provide) {
 
-  var obj = new angular.mock.$HttpBackendProvider(),
-      createHttpBackendMock = obj.$get[1];
+    var obj = new angular.mock.$HttpBackendProvider(),
+        createHttpBackendMock = obj.$get[1];
 
-  // Decorate by passing in the constructor for mock $httpBackend
-  $provide.decorator('$httpBackend', createHttpBackendMock);
+    // Decorate by passing in the constructor for mock $httpBackend
+    $provide.decorator('$httpBackend', createHttpBackendMock);
 
   }]);
 
