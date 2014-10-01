@@ -1,6 +1,6 @@
 /*
-  AngularJS Mocks Backend v0.1.4
-  (c) 2014 Erko Bridee - https://github.com/erkobridee/angular-mocks-backend/releases/tag/v0.1.4
+  AngularJS Mocks Backend v0.1.5
+  (c) 2014 Erko Bridee - https://github.com/erkobridee/angular-mocks-backend/releases/tag/0.1.5
   License: MIT
 */
 (function(angular) {
