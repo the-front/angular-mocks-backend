@@ -207,27 +207,12 @@
     // you can pass this as the url argument to $httpBackend.[when|expect]
   ngMockBackend.run(
 
-    ['$timeout', '$interval', 'ngMockBackendService', '$injector',
+    ['$interval', 'ngMockBackendService', '$injector',
 
-  function($timeout, $interval, service, $injector) {
+  function($interval, service, $injector) {
 
     service.config($injector);
 
-    //---
-
-    // A "run loop" of sorts to get httpBackend to
-    // issue responses and trigger the client code's callbacks
-    /*
-    var flushBackend = function() {
-      try {
-        $httpBackend.flush();
-      } catch (err) {
-        // ignore that there's nothing to flush
-      }
-      $timeout(flushBackend, RUN_LOOP_TIMEOUT);
-    };
-    $timeout(flushBackend, RUN_LOOP_TIMEOUT);
-    */
     //---
 
     // A "run loop" of sorts to get httpBackend to
