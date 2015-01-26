@@ -1,6 +1,6 @@
 /*
-  AngularJS Mocks Backend v0.1.6
-  https://github.com/the-front/angular-mocks-backend/releases/tag/0.1.6
+  AngularJS Mocks Backend v0.1.7
+  https://github.com/the-front/angular-mocks-backend/releases/tag/0.1.7
   License: MIT
 */
 (function(angular) {
@@ -192,7 +192,7 @@
   function($provide) {
 
     var obj = new angular.mock.$HttpBackendProvider(),
-        createHttpBackendMock = obj.$get[1];
+        createHttpBackendMock = obj.$get[ obj.$get.length - 1 ]; // for angular mock 1.3.4 +
 
     // Decorate by passing in the constructor for mock $httpBackend
     $provide.decorator('$httpBackend', createHttpBackendMock);
